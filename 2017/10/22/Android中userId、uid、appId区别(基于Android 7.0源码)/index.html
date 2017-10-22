@@ -4,14 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Hexo</title>
+  <title>Android中userId、uid、appId区别(基于Android 7.0源码) | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Android中userId、uid、appId区别(基于Android 7.0源码)android中的uid和linux系统中的uid是两码事，linux系统中的uid是针对多用户操作系统中用来区分用户的；android中借鉴了linux的思想，对于uid进行了改变，在android中uid是分配给各个app使用的，每个app的uid是唯一的，用来做权限管理的。参考源码路径：/framework">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android中userId、uid、appId区别(基于Android 7.0源码)">
+<meta property="og:url" content="http://yoursite.com/2017/10/22/Android中userId、uid、appId区别(基于Android 7.0源码)/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Android中userId、uid、appId区别(基于Android 7.0源码)android中的uid和linux系统中的uid是两码事，linux系统中的uid是针对多用户操作系统中用来区分用户的；android中借鉴了linux的思想，对于uid进行了改变，在android中uid是分配给各个app使用的，每个app的uid是唯一的，用来做权限管理的。参考源码路径：/framework">
+<meta property="og:updated_time" content="2017-10-22T15:56:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Android中userId、uid、appId区别(基于Android 7.0源码)">
+<meta name="twitter:description" content="Android中userId、uid、appId区别(基于Android 7.0源码)android中的uid和linux系统中的uid是两码事，linux系统中的uid是针对多用户操作系统中用来区分用户的；android中借鉴了linux的思想，对于uid进行了改变，在android中uid是分配给各个app使用的，每个app的uid是唯一的，用来做权限管理的。参考源码路径：/framework">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -193,9 +197,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-Android中userId、uid、appId区别(基于Android 7.0源码)" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Android中userId、uid、appId区别(基于Android 7.0源码)" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2017/10/22/Android中userId、uid、appId区别(基于Android 7.0源码)/" class="article-date">
@@ -211,12 +213,19 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/22/Android中userId、uid、appId区别(基于Android 7.0源码)/">Android中userId、uid、appId区别(基于Android 7.0源码)</a>
+    <h1 class="article-title" itemprop="name">
+      Android中userId、uid、appId区别(基于Android 7.0源码)
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -252,219 +261,68 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/22/android/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">android</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
 
 
 
-
-  
-    <article id="post-android" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/10/22/android/" class="article-date">
-  	<time datetime="2017-10-22T13:27:46.000Z" itemprop="datePublished">2017-10-22</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/22/android/">android</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Android中userId、uid、appId区别(基于Android 7.0源码)" data-title="Android中userId、uid、appId区别(基于Android 7.0源码)" data-url="http://yoursite.com/2017/10/22/Android中userId、uid、appId区别(基于Android 7.0源码)/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
 
-
-
-
-
-
-  
-    <article id="post-关于device-owner你所需要了解的一切" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/10/22/关于device-owner你所需要了解的一切/" class="article-date">
-  	<time datetime="2017-10-22T13:27:46.000Z" itemprop="datePublished">2017-10-22</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/22/关于device-owner你所需要了解的一切/">关于device-owner你所需要了解的一切</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="关于device-owner你所需要了解的一切"><a href="#关于device-owner你所需要了解的一切" class="headerlink" title="关于device-owner你所需要了解的一切"></a>关于device-owner你所需要了解的一切</h1><h2 id="device-owner简介"><a href="#device-owner简介" class="headerlink" title="device-owner简介"></a>device-owner简介</h2><p>在android中device-owner是设备的管理者，一旦一个app成为device-owner以后，将拥有如下权限:</p>
-<ul>
-<li>写settings数据库</li>
-<li>关闭gps  </li>
-<li>静默安装、卸载应用（6.0以上）  </li>
-<li>防卸载  </li>
-<li>冻结手机上的其他app etc</li>
-</ul>
-<p>更多的功能可以看DevicePolicyManagerService的源码。</p>
-<h2 id="一个app如何才能成为device-owner？"><a href="#一个app如何才能成为device-owner？" class="headerlink" title="一个app如何才能成为device-owner？"></a>一个app如何才能成为device-owner？</h2><h3 id="1-有root权限"><a href="#1-有root权限" class="headerlink" title="1.有root权限"></a>1.有root权限</h3><p>1）创建 device_owner.xml，内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt; </div><div class="line">&lt;device-owner package=&quot;your.owner.app.package.id&quot; name=&quot;Your app name&quot; /&gt;</div></pre></td></tr></table></figure></p>
-<p>2) <code>adb push device_owner.xml /sdcard/</code></p>
-<p>3)<code>adb shell</code></p>
-<p>4)<code>su</code></p>
-<p>5)<code>cp /sdcard/device_owner.xml /data/system/</code></p>
-<p>6)<code>cd /data/system/</code></p>
-<p>7)<code>chown system:system device_owner.xml</code></p>
-<p>8)<code>reboot</code></p>
-<h3 id="2-无root权限"><a href="#2-无root权限" class="headerlink" title="2.无root权限"></a>2.无root权限</h3><h4 id="2-1-adb-shell命令"><a href="#2-1-adb-shell命令" class="headerlink" title="2.1 adb shell命令"></a>2.1 adb shell命令</h4><p>在手机上不存在任何账户的情况下，可以通过adb命令：</p>
-<p><code>adb shell dpm set-device-owner your.package.name/your.adminreceiver</code></p>
-<p>将你的应用设置为device-owner。其中your.adminreceiver是DeviceAdminReceiver的子类，需要你自己实现。</p>
-<p>ps：这种情况下手机上不能存在账户，可以通过如下方法来解决手机上存在的账户问题：</p>
-<p>1）<code>adb shell dumpsys account</code></p>
-<p>查看该命令的输出结果，如果手机上存在账户的话，会看到<code>Accounts</code>字段不为0</p>
-<p>2）<code>adb shell pm hide 来禁用提供上面账号的应用然后在执行设置device-owner的命令</code></p>
-<h4 id="2-2-nfc方式"><a href="#2-2-nfc方式" class="headerlink" title="2.2 nfc方式"></a>2.2 nfc方式</h4><p>这种方式要求比较苛刻，需要两部手机，且这两部手机都需要有nfc功能，并且想要设置device-owner的那台手机需要先恢复出厂设置，因此在实际项目中用到的较少。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/15/hello-world/" class="article-date">
-  	<time datetime="2016-03-15T12:21:27.000Z" itemprop="datePublished">2016-03-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/15/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -488,8 +346,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

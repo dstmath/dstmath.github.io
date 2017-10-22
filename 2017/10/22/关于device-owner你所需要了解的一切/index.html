@@ -6,13 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>关于device-owner你所需要了解的一切 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="关于device-owner你所需要了解的一切device-owner简介在android中device-owner是设备的管理者，一旦一个app成为device-owner以后，将拥有如下权限:  写settings数据库 关闭gps   静默安装、卸载应用（6.0以上）   防卸载   冻结手机上的其他app etc  更多的功能可以看DevicePolicyManagerService的源码">
+<meta property="og:type" content="article">
 <meta property="og:title" content="关于device-owner你所需要了解的一切">
-<meta property="og:url" content="http://yoursite.com/2017/10/22/关于device-owner你所需要了解的一切-1/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/10/22/关于device-owner你所需要了解的一切/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:updated_time" content="2017-10-22T15:38:22.000Z">
+<meta property="og:description" content="关于device-owner你所需要了解的一切device-owner简介在android中device-owner是设备的管理者，一旦一个app成为device-owner以后，将拥有如下权限:  写settings数据库 关闭gps   静默安装、卸载应用（6.0以上）   防卸载   冻结手机上的其他app etc  更多的功能可以看DevicePolicyManagerService的源码">
+<meta property="og:updated_time" content="2017-10-22T15:56:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于device-owner你所需要了解的一切">
+<meta name="twitter:description" content="关于device-owner你所需要了解的一切device-owner简介在android中device-owner是设备的管理者，一旦一个app成为device-owner以后，将拥有如下权限:  写settings数据库 关闭gps   静默安装、卸载应用（6.0以上）   防卸载   冻结手机上的其他app etc  更多的功能可以看DevicePolicyManagerService的源码">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -194,11 +197,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-关于device-owner你所需要了解的一切-1" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-关于device-owner你所需要了解的一切" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/10/22/关于device-owner你所需要了解的一切-1/" class="article-date">
-  	<time datetime="2017-10-22T15:38:22.000Z" itemprop="datePublished">2017-10-22</time>
+      <a href="/2017/10/22/关于device-owner你所需要了解的一切/" class="article-date">
+  	<time datetime="2017-10-22T13:27:46.000Z" itemprop="datePublished">2017-10-22</time>
 </a>
     </div>
   
@@ -227,7 +230,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="关于device-owner你所需要了解的一切"><a href="#关于device-owner你所需要了解的一切" class="headerlink" title="关于device-owner你所需要了解的一切"></a>关于device-owner你所需要了解的一切</h1><h2 id="device-owner简介"><a href="#device-owner简介" class="headerlink" title="device-owner简介"></a>device-owner简介</h2><p>在android中device-owner是设备的管理者，一旦一个app成为device-owner以后，将拥有如下权限:</p>
+<ul>
+<li>写settings数据库</li>
+<li>关闭gps  </li>
+<li>静默安装、卸载应用（6.0以上）  </li>
+<li>防卸载  </li>
+<li>冻结手机上的其他app etc</li>
+</ul>
+<p>更多的功能可以看DevicePolicyManagerService的源码。</p>
+<h2 id="一个app如何才能成为device-owner？"><a href="#一个app如何才能成为device-owner？" class="headerlink" title="一个app如何才能成为device-owner？"></a>一个app如何才能成为device-owner？</h2><h3 id="1-有root权限"><a href="#1-有root权限" class="headerlink" title="1.有root权限"></a>1.有root权限</h3><p>1）创建 device_owner.xml，内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt; </div><div class="line">&lt;device-owner package=&quot;your.owner.app.package.id&quot; name=&quot;Your app name&quot; /&gt;</div></pre></td></tr></table></figure></p>
+<p>2) <code>adb push device_owner.xml /sdcard/</code></p>
+<p>3)<code>adb shell</code></p>
+<p>4)<code>su</code></p>
+<p>5)<code>cp /sdcard/device_owner.xml /data/system/</code></p>
+<p>6)<code>cd /data/system/</code></p>
+<p>7)<code>chown system:system device_owner.xml</code></p>
+<p>8)<code>reboot</code></p>
+<h3 id="2-无root权限"><a href="#2-无root权限" class="headerlink" title="2.无root权限"></a>2.无root权限</h3><h4 id="2-1-adb-shell命令"><a href="#2-1-adb-shell命令" class="headerlink" title="2.1 adb shell命令"></a>2.1 adb shell命令</h4><p>在手机上不存在任何账户的情况下，可以通过adb命令：</p>
+<p><code>adb shell dpm set-device-owner your.package.name/your.adminreceiver</code></p>
+<p>将你的应用设置为device-owner。其中your.adminreceiver是DeviceAdminReceiver的子类，需要你自己实现。</p>
+<p>ps：这种情况下手机上不能存在账户，可以通过如下方法来解决手机上存在的账户问题：</p>
+<p>1）<code>adb shell dumpsys account</code></p>
+<p>查看该命令的输出结果，如果手机上存在账户的话，会看到<code>Accounts</code>字段不为0</p>
+<p>2）<code>adb shell pm hide 来禁用提供上面账号的应用然后在执行设置device-owner的命令</code></p>
+<h4 id="2-2-nfc方式"><a href="#2-2-nfc方式" class="headerlink" title="2.2 nfc方式"></a>2.2 nfc方式</h4><p>这种方式要求比较苛刻，需要两部手机，且这两部手机都需要有nfc功能，并且想要设置device-owner的那台手机需要先恢复出厂设置，因此在实际项目中用到的较少。</p>
+
       
     </div>
     
@@ -236,9 +264,18 @@
     
 <nav id="article-nav">
   
+    <a href="/2017/10/22/android/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          android
+        
+      </div>
+    </a>
   
-    <a href="/2017/10/22/android/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">android</div>
+  
+    <a href="/2016/03/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -273,7 +310,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="关于device-owner你所需要了解的一切-1" data-title="关于device-owner你所需要了解的一切" data-url="http://yoursite.com/2017/10/22/关于device-owner你所需要了解的一切-1/"></div>
+	<div class="ds-thread" data-thread-key="关于device-owner你所需要了解的一切" data-title="关于device-owner你所需要了解的一切" data-url="http://yoursite.com/2017/10/22/关于device-owner你所需要了解的一切/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
